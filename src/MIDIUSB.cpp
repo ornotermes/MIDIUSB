@@ -64,6 +64,11 @@ bool MIDI_::setup(USBSetup& setup __attribute__((unused)))
 	return false;
 }
 
+int MIDI_::isAvailible()
+{
+	return USB_Available(MIDI_TX);
+}
+
 int MIDI_::getDescriptor(USBSetup& setup __attribute__((unused)))
 {
 	return 0;

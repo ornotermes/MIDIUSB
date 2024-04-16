@@ -242,6 +242,8 @@ public:
 	void sendMIDI(midiEventPacket_t event);
 	/// Sends a MIDI buffer of length size to USB
 	size_t write(const uint8_t *buffer, size_t size);
+	/// Check if USB MIDI interface is ready
+	int isAvailible();
 	/// NIY
 	operator bool();
 };
